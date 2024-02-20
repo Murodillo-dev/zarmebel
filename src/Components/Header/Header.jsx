@@ -36,7 +36,8 @@ const Header = () => {
 
       <div className="carousel ">
         <Carousel autoplay
-          autoplaySpeed={1500}
+          autoplaySpeed={2000}
+          speed = {1000}
         >
           <div>
             <div style={{ ...contentStyle, backgroundImage: `url(${img1})`, backgroundSize: 'cover' ,backgroundPosition: 'center center' }}></div>
