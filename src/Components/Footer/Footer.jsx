@@ -3,9 +3,9 @@ import logo from "./zar.png";
 
 const Footer = () => {
   return (
-    <div className="w-[100%]  h-auto bg-[#0F1B03] py-1  flex justify-around  flex-wrap items-center">
+    <div className="w-[100%]  h-auto bg-[#0F1B03] py-1  flex justify-around  flex-wrap ">
 
-      <div className="logo max-w-45  flex justify-start flex-wrap">
+      <div className="logo max-w-45  flex justify-start flex-wrap items-center">
         <div className="logo__left">
           <img className="w-[110px]" src={logo} alt="" />
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
             <li><a href="">To’qilgan Stol Stul</a></li>
           </ul>
         </div>
-        <div className="footer__right">
+        <div className="footer__right ">
           <ul className="text-white text-base font-medium">
             <li ><a className="text-white text-3xl font-medium" href="">Bog'lanish</a></li>
             <li><a href=""><i class=" mr-2 fa-solid fa-location-dot"></i>Manzil</a></li>

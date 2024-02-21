@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react';
+import { Button, Drawer } from 'antd';
 import zar from './zar.png'
 import img1 from './img1.png'
 import img2 from './img2.png'
@@ -14,6 +16,15 @@ const contentStyle = {
 
 
 const Header = () => {
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div >
 
@@ -32,6 +43,19 @@ const Header = () => {
           <li><a target="_blank" href="https://www.instagram.com/zarmebel.toshkent?igsh=bXhtYzkzaHNkbnh6"><i class="fa-brands fa-instagram"></i></a></li>
           <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
         </ul>
+
+        <div className="menu">
+
+          <Button type="primary" onClick={showDrawer}>
+            Open
+          </Button>
+          <Drawer title="Basic Drawer" onClose={onClose} open={open}>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+          </Drawer>
+        </div>
+
       </div>
 
       <div className="carousel ">

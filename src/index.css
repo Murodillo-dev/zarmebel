@@ -84,4 +84,8 @@ body {
     font-size: 17px;
     padding: 12px 16px;
   }
+
+  .fornitureInfo{
+    height: 300px;
+  }
 }
