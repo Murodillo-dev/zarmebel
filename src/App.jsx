@@ -42,7 +42,7 @@ const App = () => {
     }
   ])
   return (
-    <div className='max-w-[1440px] w-[100%] h-auto mx-auto'>
+    <div className=' app max-w-[1440px] w-[100%] h-auto mx-auto'>
       <RouterProvider router={routes} />
     </div>
   )

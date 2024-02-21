@@ -28,8 +28,8 @@ const Header = () => {
 
         <ul className='navIcon flex justify-start flex-wrap items-center gap-8 text-[20px] text-white'>
           <li><a href=""><i class="fa-solid fa-phone"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-telegram"></i></a></li>
-          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a target="_blank" href="https://t.me/mebelzarmebel"><i class="fa-brands fa-telegram"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/zarmebel.toshkent?igsh=bXhtYzkzaHNkbnh6"><i class="fa-brands fa-instagram"></i></a></li>
           <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
         </ul>
       </div>
@@ -59,14 +59,14 @@ const Header = () => {
         OMMABOP TOIFALAR
       </h1>
 
-      <div className="categories">
-        <ul className="text-black text-xl font-semibold flex justify-center flex-wrap gap-[70px] mt-[50px]">
-          <li className='hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="/">Spalniy</NavLink></li>
-          <li className='hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="stolstul">Stol Stul</NavLink></li>
-          <li className='hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="yumshiq">Yumshoq mebel  </NavLink></li>
-          <li className='hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="shkaf">Shkaf</NavLink></li>
-          <li className='hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="penal">Penal Komod</NavLink></li>
-          <li className='hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="toqilgan">To’qilgan Stol Stul</NavLink></li>
+      <div className="categories w-[100%]">
+        <ul className="text-black text-xl font-semibold flex justify-between flex-wrap mt-[50px]">
+          <li className=' categories hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="/">Spalniy</NavLink></li>
+          <li className=' categories hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="stolstul">Stol Stul</NavLink></li>
+          <li className=' categories hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="yumshiq">Yumshoq mebel  </NavLink></li>
+          <li className=' categories hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="shkaf">Shkaf</NavLink></li>
+          <li className=' categories hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="penal">Penal Komod</NavLink></li>
+          <li className=' categories hover:text-white  duration-500 hover:bg-[#0F1B03]  rounded-[15px] py-4 px-6 '><NavLink to="toqilgan">To’qilgan Stol Stul</NavLink></li>
         </ul>
       </div>
 

@@ -37,3 +37,51 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.footer__right ul li{
+  padding : 5px 0;
+}
+.footer__left ul li{
+  padding : 5px 0;
+}
+
+@media screen and (max-width:1366px) {
+  .app{
+    max-width: 1366px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .app{
+    max-width: 1200px;
+    width: 100%;
+  }
+  .stol{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+@media screen and (max-width:1024px) {
+  .app{
+    max-width: 1024px;
+    width: 100%;
+  }
+  .categories{
+    font-size: 17px;
+    padding: 12px 16px;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .app{
+    max-width: 992px;
+    width: 100%;
+  }
+  .categories{
+    font-size: 17px;
+    padding: 12px 16px;
+  }
+}

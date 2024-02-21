@@ -3,7 +3,7 @@ import axios from 'axios'
 import React, { useRef, useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, Modal, Space } from 'antd';
-import Info from './Info'
+// import Info from './Info'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -34,6 +34,7 @@ const Stol = () => {
     };
     const handleCancel = () => {
         setOpen(false);
+        setOrder(1)
     };
 
     const [order, setOrder] = useState(1)
@@ -48,7 +49,7 @@ const Stol = () => {
     }
 
     return (
-        <div className='stol w-[100%] h-auto pt-10 pb-24 px-14 flex justify-between flex-wrap'>
+        <div className='stol w-[100%] h-auto pt-10 pb-16 px-14 flex justify-between flex-wrap'>
             <div className="modal absolute z-10">
                 <Modal
                     open={open}
@@ -82,16 +83,35 @@ const Stol = () => {
                                                                     backgroundSize: 'cover',
                                                                     backgroundPosition: 'center center'
                                                                 }}></SwiperSlide>
+                                                                <SwiperSlide style={{
+                                                                    backgroundImage: `url(${value.img})`,
+                                                                    backgroundSize: 'cover',
+                                                                    backgroundPosition: 'center center'
+                                                                }}></SwiperSlide>
+                                                                <SwiperSlide style={{
+                                                                    backgroundImage: `url(${value.img})`,
+                                                                    backgroundSize: 'cover',
+                                                                    backgroundPosition: 'center center'
+                                                                }}></SwiperSlide>
+                                                                <SwiperSlide style={{
+                                                                    backgroundImage: `url(${value.img})`,
+                                                                    backgroundSize: 'cover',
+                                                                    backgroundPosition: 'center center'
+                                                                }}></SwiperSlide>
                                                             </Swiper>
                                                         </div>
-                                                        <div className="buy  ml-12">
-
+                                                        <div className="buy ml-6">
                                                             <h1 className=" text-black text-2xl font-medium text-left  ">Nomi: {value.name}</h1>
-                                                            <h1 className=" text-black text-3xl font-normal mt-3"> Narxi: {value.price * order}</h1>
+                                                            <h1 className=" text-black text-3xl font-normal text-left mt-3">Narxi: {value.price * order}</h1>
                                                             <div className="count  w-[100%] flex justify-start gap-5 mt-4">
                                                                 <button onClick={removeProduct} className="w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950"><i class="fa-solid fa-chevron-down text-black text-2xl font-semibold"></i></button>
                                                                 <input className="w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950 outline-none text-center leading-8 text-black text-3xl font-semibold" value={order} />
                                                                 <button onClick={addProduct} className="w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950"><i class="fa-solid fa-chevron-up text-black text-2xl font-semibold"></i></button>
+                                                            </div>
+                                                            <div className="fornitureInfo mt-4 max-w-[320px] h-96 text-left overflow-auto">
+                                                                <p>
+                                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto cum autem assumenda aspernatur consequuntur atque similique. Nulla eveniet officia, nihil asperiores illum unde dolor voluptatum ea dolorum mollitia repudiandae laborum explicabo iste perspiciatis excepturi? Cupiditate saepe maxime molestiae cumque. Assumenda quisquam corrupti temporibus distinctio exercitationem veniam non, quis iure fugit nobis cupiditate cumque a eligendi voluptatem facere dicta iusto laboriosam repellendus saepe. Accusantium voluptatem natus quo inventore soluta dolorem perspiciatis ut nobis ducimus nesciunt maxime
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </> :
@@ -110,7 +130,7 @@ const Stol = () => {
             {
                 api.map((value) => {
                     return (
-                        <div key={value.id} onClick={() => showModal(value.id)} className="card max-w-[300px] w-[100%] h-auto bg-[#0F1B03] mt-10 rounded-[15px] overflow-hidden ">
+                        <div key={value.id} onClick={() => showModal(value.id)} className="card max-w-[300px] w-[100%] h-auto bg-[#0F1B03] mt-10 rounded-[15px] overflow-hidden hover:cursor-pointer">
                             <div className="image w-[100%] h-[300px] "
                                 style={{
                                     backgroundImage: `url(${value.img})`,
