@@ -38,26 +38,38 @@ body {
   margin-right: auto;
 }
 
-.footer__right ul li{
-  padding : 5px 0;
-}
-.footer__left ul li{
-  padding : 5px 0;
+.footer__right ul li {
+  padding: 5px 0;
 }
 
+.footer__left ul li {
+  padding: 5px 0;
+}
+
+.menu {
+  display: none;
+}
+
+.DrawerClassNames {
+  background-color: red;
+}
+
+
+
 @media screen and (max-width:1366px) {
-  .app{
+  .app {
     max-width: 1366px;
     width: 100%;
   }
 }
 
 @media screen and (max-width:1200px) {
-  .app{
+  .app {
     max-width: 1200px;
     width: 100%;
   }
-  .stol{
+
+  .stol {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -65,27 +77,207 @@ body {
 
 
 @media screen and (max-width:1024px) {
-  .app{
+  .app {
     max-width: 1024px;
     width: 100%;
   }
-  .categories{
+
+  .categories {
     font-size: 17px;
     padding: 12px 16px;
+  }
+
+  .stol {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media screen and (max-width:992px) {
-  .app{
+  .app {
     max-width: 992px;
     width: 100%;
   }
-  .categories{
+
+  .categories {
     font-size: 17px;
     padding: 12px 16px;
   }
 
-  .fornitureInfo{
+  .fornitureInfo {
     height: 300px;
+  }
+
+  .navIcon {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .navLink992 {
+    display: none;
+  }
+
+  .zarmebel {
+    font-size: 25px;
+  }
+
+  .font {
+    font-size: 25px;
+  }
+
+  .zar__info {
+    max-width: 230px;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .zar__logo {
+    width: 90px;
+  }
+
+
+  .footer__right ul li {
+    font-size: 15px;
+  }
+
+  .footer__left ul li {
+    font-size: 15px;
+  }
+
+  .catolog,
+  .contact {
+    font-size: 24px;
+  }
+
+  .footer {
+    padding: 0 30px;
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .stol {
+    justify-content: space-around;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+  .categories ul {
+    justify-content: space-between;
+  }
+
+  .categories ul li {
+    text-align: center;
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .categories ul li a {
+    font-size: 18px;
+  }
+
+  .categories ul {
+    justify-content: center;
+  }
+
+  .categories ul li {
+    width: 40%;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px 25px;
+  }
+
+  .logo{
+    justify-content: center;
+  }
+
+  .zarmebel {
+    font-size: 20px;
+  }
+
+  .font {
+    font-size: 20px;
+  }
+
+  .zar__info {
+    max-width: 200px;
+    width: 100%;
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .zar__logo {
+    width: 80px;
+  }
+  .footer__left ul  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .footer__right ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .footer__left ul li , .footer__right ul li{
+    padding: 0;
+  }
+
+  .list {
+    width: 100%;
+  
+  }
+}
+
+@media screen and (max-width:576px) {
+  .categories {
+    padding: 10px 0px;
+  }
+
+  .categories ul li a {
+    font-size: 16px;
+  }
+
+  .categories ul {
+    justify-content: space-around;
+  }
+
+  .categories ul li {
+    width: 38%;
+  }
+
+  .popular {
+    font-size: 26px;
+  }
+
+  .navLink {
+    display: none;
+  }
+
+  .navLink992 {
+    display: block;
+  }
+
+  .line {
+    display: block;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .popular {
+    font-size: 22px;
   }
 }

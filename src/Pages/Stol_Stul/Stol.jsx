@@ -49,7 +49,7 @@ const Stol = () => {
     }
 
     return (
-        <div className='stol w-[100%] h-auto pt-10 pb-16 px-14 flex justify-between flex-wrap'>
+        <div className='stol w-[100%] h-auto pt-2 pb-16 px-14 flex justify-between flex-wrap'>
             <div className="modal absolute z-10">
                 <Modal
                     open={open}

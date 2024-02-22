@@ -33,8 +33,8 @@ const Header = () => {
 
         <ul className='navLink text-white flex justify-start flex-wrap items-center gap-12'>
           <li><NavLink to="/">Bosh sahifa</NavLink></li>
-          <li><a href="">Biz haqimizda</a></li>
-          <li><a href="">Bog’lanish</a></li>
+          <li><NavLink to="">Biz haqimizda</NavLink></li>
+          <li><NavLink to="">Xizmatlar</NavLink></li>
         </ul>
 
         <ul className='navIcon flex justify-start flex-wrap items-center gap-8 text-[20px] text-white'>
@@ -46,13 +46,23 @@ const Header = () => {
 
         <div className="menu">
 
-          <Button type="primary" onClick={showDrawer}>
-            Open
+          <Button className='bg-[#0F1B03] border-b-none' type="primary" onClick={showDrawer}>
+            <i class="fa-solid fa-bars text-[20px]"></i>
           </Button>
-          <Drawer title="Basic Drawer" onClose={onClose} open={open}>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+          <Drawer width={300} style={{}} title="Bog'lanish" onClose={onClose} open={open}>
+            <div className="drawer h-[100%] bg-red">
+              <ul className='navLink992 text-2xl text-black font-medium flex justify-start flex-wrap items-center gap-12'>
+                <li className='my-[10px]'><NavLink to="/">Bosh sahifa</NavLink></li>
+                <li className='my-[10px]'><NavLink to="">Biz haqimizda</NavLink></li>
+                <li className='my-[10px]'><NavLink to="">Xizmatlar</NavLink></li>
+              </ul>
+              <div className="line border-gray-500 border-[0.75px] my-2"></div>
+              <ul className='text-2xl font-medium'>
+                <li className='my-[10px]'><a href=""><i class=" mr-2 fa-solid fa-phone"></i>+998942288778</a></li>
+                <li className='my-[10px]'><a target="_blank" href="https://t.me/mebelzarmebel"><i class=" mr-2 fa-brands fa-telegram"></i>Zarmebel</a></li>
+                <li className='my-[10px]'><a target="_blank" href="https://www.instagram.com/zarmebel.toshkent?igsh=bXhtYzkzaHNkbnh6"><i class=" mr-2 fa-brands fa-instagram"></i>Zarmebel</a></li>
+              </ul>
+            </div>
           </Drawer>
         </div>
 
@@ -65,10 +75,10 @@ const Header = () => {
           waitForAnimate:true
         >
           <div>
-            <div style={{ ...contentStyle, backgroundImage: `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
+            <div style={{ ...contentStyle, backgroundImage: `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center center', objectFit:'cover' }}></div>
           </div>
           <div >
-            <div style={{ ...contentStyle, backgroundImage: `url(${img2})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
+            <div style={{ ...contentStyle, backgroundImage: `url(${img2})`, backgroundSize: 'cover', backgroundPosition: 'center center' ,backgroundPosition: 'center center', objectFit:'cover' }}></div>
           </div>
           <div >
             <div style={{ ...contentStyle, backgroundImage: `url(${sofa})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
@@ -79,7 +89,7 @@ const Header = () => {
         </Carousel>
       </div>
 
-      <h1 className="text-black text-4xl font-bold text-center mt-[50px]">
+      <h1 className="popular text-black text-4xl font-bold text-center mt-[50px]">
         OMMABOP TOIFALAR
       </h1>
 
