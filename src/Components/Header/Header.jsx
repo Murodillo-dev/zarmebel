@@ -49,7 +49,7 @@ const Header = () => {
           <Button className='bg-[#0F1B03] border-b-none' type="primary" onClick={showDrawer}>
             <i class="fa-solid fa-bars text-[20px]"></i>
           </Button>
-          <Drawer width={300} style={{}} title="Bog'lanish" onClose={onClose} open={open}>
+          <Drawer width={320} style={{}} title="Bog'lanish" onClose={onClose} open={open}>
             <div className="drawer h-[100%] bg-red">
               <ul className='navLink992 text-2xl text-black font-medium flex justify-start flex-wrap items-center gap-12'>
                 <li className='my-[10px]'><NavLink to="/">Bosh sahifa</NavLink></li>

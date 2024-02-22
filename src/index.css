@@ -191,13 +191,82 @@ body {
     width: 40%;
   }
 
+  .popular {
+    margin-top: 30px;
+  }
+
+  .categories {
+    padding: 5px;
+  }
+
+  .categories ul {
+    margin-top: 0px;
+  }
+
   .footer {
     flex-direction: column;
     justify-content: flex-start;
     padding: 15px 25px;
   }
 
-  .logo{
+  .stol {
+    padding-right: 35px;
+    padding-left: 35px;
+    justify-content: space-between;
+  }
+.ant-modal-content{
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 0;
+}
+.swiper{
+  max-width: 768px;
+  width: 100%;
+}
+.swiper-button-prev , .swiper-button-next{
+  display: none;
+}
+.card__info{
+  display: flex;
+  justify-content: center;
+}
+.ant-modal-title{
+  width: 100%;
+}
+
+  .buy{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+.buy__name {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+.buy__price{
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+.fornitureInfo{
+  max-width: 700px;
+  width: 100%;
+}
+.buy__info{
+  width: 100%;
+}
+.count{
+  display: flex;
+  justify-content: center ;
+}
+
+  .logo {
     justify-content: center;
   }
 
@@ -219,26 +288,30 @@ body {
   .zar__logo {
     width: 80px;
   }
-  .footer__left ul  {
+
+  .footer__left ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 10px 0;
   }
+
   .footer__right ul {
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  .footer__left ul li , .footer__right ul li{
+
+  .footer__left ul li,
+  .footer__right ul li {
     padding: 0;
   }
 
   .list {
     width: 100%;
-  
+
   }
 }
 
@@ -253,10 +326,16 @@ body {
 
   .categories ul {
     justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  .categories {
+    padding: 5px;
   }
 
   .categories ul li {
-    width: 38%;
+    width: 39%;
   }
 
   .popular {
@@ -274,10 +353,100 @@ body {
   .line {
     display: block;
   }
+
+  .stol {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-top: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .product__name {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .product__price {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .card {
+    max-width: 300px;
+    margin-top: 0px;
+  }
+
+  .footer {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+.logo{
+  justify-content: center;
+}
+.zar__info{
+  max-width: 170px;
+}
+  .footer__left ul li, .footer__right ul li
+  {
+  padding: 3px 5px;
+}
+
 }
 
 @media screen and (max-width:400px) {
+  .navbar{
+    padding: 10px 20px;
+  }
   .popular {
-    font-size: 22px;
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .stol {
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .categories {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .categories ul li {
+    width: 50%;
+  }
+
+  .categories ul li a {
+    font-size: 14px;
+  }
+
+  .zar__logo{
+    width: 60px;
+  }
+  .zar__info{
+    font-size: 10px;
+    max-width: 145px;
+  }
+  font {
+    font-size: 15px;
+  };
+  .zarmebel{
+    font-size: 15px;
+  }
+  .footer__left ul li a , .footer__right ul li a{
+    font-size: 12px ;
+  }
+  .catolog , .contact{
+    font-size: 18px!important;
+  }
+  .list{
+    padding: 0px 5px!important;
+    margin-bottom: -10px;
   }
 }
