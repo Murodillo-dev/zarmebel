@@ -29,7 +29,7 @@ const Header = () => {
     <div >
 
       <div className="navbar w-[100%] h-auto py-4 px-8 box-border bg-[#0F1B03] flex justify-between flex-wrap items-center">
-        <NavLink to="/" className='brand'><img className='w-[50px] h-[50px]' src={zar} alt="" /></NavLink>
+        <NavLink to="/" ><img className=' brand w-[50px] h-[50px]' src={zar} alt="" /></NavLink>
 
         <ul className='navLink text-white flex justify-start flex-wrap items-center gap-12'>
           <li><NavLink to="/">Bosh sahifa</NavLink></li>
@@ -73,19 +73,32 @@ const Header = () => {
           autoplaySpeed={2000}
           speed={1000}
           waitForAnimate:true
+          height={200}
         >
+
           <div>
-            <div style={{ ...contentStyle, backgroundImage: `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center center', objectFit:'cover' }}></div>
+            <img className='carousel__image' src={img1} alt="" />
           </div>
           <div >
-            <div style={{ ...contentStyle, backgroundImage: `url(${img2})`, backgroundSize: 'cover', backgroundPosition: 'center center' ,backgroundPosition: 'center center', objectFit:'cover' }}></div>
+            <img className='carousel__image' src={img1} alt="" />
+          </div>
+          <div >
+            <img className='carousel__image' src={sofa} alt="" />
+          </div>
+
+
+          {/* <div>
+            <div style={{ ...contentStyle, backgroundImage: `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center center', objectFit: 'cover' }}></div>
+          </div>
+          <div >
+            <div style={{ ...contentStyle, backgroundImage: `url(${img2})`, backgroundSize: 'cover', backgroundPosition: 'center center', backgroundPosition: 'center center', objectFit: 'cover' }}></div>
           </div>
           <div >
             <div style={{ ...contentStyle, backgroundImage: `url(${sofa})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
           </div>
           <div >
             <div style={{ ...contentStyle, backgroundImage: `url(${img2})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
-          </div>
+          </div> */}
         </Carousel>
       </div>
 

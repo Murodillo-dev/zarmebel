@@ -5,7 +5,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, Modal, Space } from 'antd';
 import { Card } from 'antd';
 const { Meta } = Card;
-// import Info from './Info'
+
+import { Carousel } from 'antd';
+const contentStyle = {
+    margin: 0,
+    height: '160px',
+};
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -69,6 +74,7 @@ const Stol = () => {
                                                 value.id == id ?
                                                     <>
                                                         <div className="infoCarousel max-w-[400px] w-[100%] h-[450px] rounded-[15px] overflow-hidden">
+
                                                             <Swiper
                                                                 slidesPerView={1}
                                                                 spaceBetween={0}
@@ -103,6 +109,7 @@ const Stol = () => {
                                                                 }}></SwiperSlide>
                                                             </Swiper>
                                                         </div>
+
                                                         <div className="buy ml-6">
                                                             <h1 className=" buy__name text-black text-2xl font-medium text-left  ">Nomi: {value.name}</h1>
                                                             <h1 className=" buy__price text-black text-3xl font-normal text-left mt-3">Narxi: {value.price * order}</h1>
@@ -137,8 +144,8 @@ const Stol = () => {
                         <div class="card" onClick={() => showModal(value.id)}>
                             <img src={value.img} class="card-img-top" alt="..." />
                             <div class="card-body">
-                            <h1 className=" product__name text-gray-700 text-lg font-bold mt-5 ml-3">Nomi: {value.name}</h1>
-                            <h1 className="product__price text-gray-700 text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price} so'm</h1>
+                                <h1 className=" product__name text-gray-700 text-lg font-bold mt-5 ml-3">Nomi: {value.name}</h1>
+                                <h1 className="product__price text-gray-700 text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price} so'm</h1>
                             </div>
                         </div>
 
