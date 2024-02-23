@@ -54,6 +54,23 @@ body {
   background-color: red;
 }
 
+.card {
+  max-width: 300px;
+  width: 100%;
+  max-height: 400px;
+  /* background-color: #0F1B03; */
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.card img {
+  width: 100%;
+  max-height: 75%;
+}
+
 
 
 @media screen and (max-width:1366px) {
@@ -210,61 +227,77 @@ body {
   }
 
   .stol {
-    padding-right: 35px;
-    padding-left: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
     justify-content: space-between;
   }
-.ant-modal-content{
-  max-width: 500px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: auto;
-  padding: 0;
-}
-.swiper{
-  max-width: 768px;
-  width: 100%;
-}
-.swiper-button-prev , .swiper-button-next{
-  display: none;
-}
-.card__info{
-  display: flex;
-  justify-content: center;
-}
-.ant-modal-title{
-  width: 100%;
-}
 
-  .buy{
+  .ant-modal-content {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+  }
+
+  .swiper {
+    max-width: 768px;
+    width: 100%;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .card {
+    max-width: 275px;
+    width: 100%;
+  }
+
+  .card__info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ant-modal-title {
+    width: 100%;
+  }
+
+  .buy {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-.buy__name {
-  width: 100%;
-  margin-top: 10px;
-  text-align: center;
-}
-.buy__price{
-  width: 100%;
-  text-align: center;
-  margin: 0;
-}
-.fornitureInfo{
-  max-width: 700px;
-  width: 100%;
-}
-.buy__info{
-  width: 100%;
-}
-.count{
-  display: flex;
-  justify-content: center ;
-}
+
+  .buy__name {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .buy__price {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .fornitureInfo {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .buy__info {
+    width: 100%;
+  }
+
+  .count {
+    display: flex;
+    justify-content: center;
+  }
 
   .logo {
     justify-content: center;
@@ -355,51 +388,108 @@ body {
   }
 
   .stol {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
     padding-bottom: 20px;
     padding-top: 0;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
+    margin-top: -20px;
+    flex-shrink: 2;
+    /* gap: 2px; */
+
   }
 
   .product__name {
     font-size: 17px;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-left: 0;
+    font-weight: 700;
   }
 
   .product__price {
     font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 0;
   }
 
   .card {
-    max-width: 300px;
-    margin-top: 0px;
+    max-width: 48%;
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .card img {
+    width: 100%;
+    max-height: 80%;
   }
 
   .footer {
     padding-left: 5px;
     padding-right: 5px;
   }
-.logo{
-  justify-content: center;
-}
-.zar__info{
-  max-width: 170px;
-}
-  .footer__left ul li, .footer__right ul li
-  {
-  padding: 3px 5px;
+
+  .logo {
+    justify-content: center;
+  }
+
+  .zar__info {
+    max-width: 170px;
+  }
+
+  .footer__left ul li,
+  .footer__right ul li {
+    padding: 3px 5px;
+  }
+
+  .buy__name {
+    font-size: 15px;
+  
+  }
+
+  .buy__price {
+    font-size: 17px;
+    margin: -5px;
+  }
+
+  .product__plus,
+  .product__minus {
+    width: 28px;
+    height: 26px;
+  }
+
+  .product__count {
+    width: 28px;
+    height: 26px;
+    font-size: 18px;
+  }
+
+  .count {
+    margin-top: 5px;
+  }
+
+  .up,
+  .down {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .infoCarousel {
+    max-width: 250px;
+    width: 100%;
+  }
+  .swiper-wrapper , .swiper-slide{
+    max-width: 250px;
+  }
 }
 
-}
+
 
 @media screen and (max-width:400px) {
-  .navbar{
+  .navbar {
     padding: 10px 20px;
   }
+
   .popular {
     font-size: 20px;
     margin: 5px;
@@ -409,9 +499,7 @@ body {
     justify-content: center;
   }
 
-  .card {
-    max-width: 300px;
-  }
+
 
   .categories {
     padding-left: 5px;
@@ -426,27 +514,57 @@ body {
     font-size: 14px;
   }
 
-  .zar__logo{
+  .zar__logo {
     width: 60px;
   }
-  .zar__info{
+
+  .zar__info {
     font-size: 10px;
     max-width: 145px;
   }
+
   font {
     font-size: 15px;
-  };
-  .zarmebel{
+  }
+
+  .product__name {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .product__price {
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+  }
+
+  .zarmebel {
     font-size: 15px;
   }
-  .footer__left ul li a , .footer__right ul li a{
-    font-size: 12px ;
+
+  .footer__left ul li a,
+  .footer__right ul li a {
+    font-size: 12px;
   }
-  .catolog , .contact{
-    font-size: 18px!important;
+
+  .catolog,
+  .contact {
+    font-size: 18px !important;
   }
-  .list{
-    padding: 0px 5px!important;
+
+  .list {
+    padding: 0px 5px !important;
     margin-bottom: -10px;
+  }
+
+  .stol {
+    padding-left: 5px;
+    padding-right: 5px;
+    justify-content: space-between;
+  }
+
+  .card {
+    max-width: 48%;
+    width: 100%;
   }
 }

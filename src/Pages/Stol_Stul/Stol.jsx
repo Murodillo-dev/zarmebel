@@ -3,6 +3,8 @@ import axios from 'axios'
 import React, { useRef, useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Button, Modal, Space } from 'antd';
+import { Card } from 'antd';
+const { Meta } = Card;
 // import Info from './Info'
 
 import 'swiper/css';
@@ -105,9 +107,9 @@ const Stol = () => {
                                                             <h1 className=" buy__name text-black text-2xl font-medium text-left  ">Nomi: {value.name}</h1>
                                                             <h1 className=" buy__price text-black text-3xl font-normal text-left mt-3">Narxi: {value.price * order}</h1>
                                                             <div className="count  w-[100%] flex justify-start gap-5 mt-4">
-                                                                <button onClick={removeProduct} className="w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950"><i class="fa-solid fa-chevron-down text-black text-2xl font-semibold"></i></button>
-                                                                <input className="w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950 outline-none text-center leading-8 text-black text-3xl font-semibold" value={order} />
-                                                                <button onClick={addProduct} className="w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950"><i class="fa-solid fa-chevron-up text-black text-2xl font-semibold"></i></button>
+                                                                <button onClick={removeProduct} className=" product__plus w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950"><i class="fa-solid fa-chevron-down down text-black text-2xl font-semibold"></i></button>
+                                                                <input className=" product__count w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950 outline-none text-center leading-8 text-black text-3xl font-semibold" value={order} />
+                                                                <button onClick={addProduct} className=" product__plus w-9 h-8 bg-zinc-300 bg-opacity-0 rounded border border-stone-950"><i class="fa-solid fa-chevron-up up text-black text-2xl font-semibold"></i></button>
                                                             </div>
                                                             <div className="fornitureInfo mt-4 max-w-[320px] w-[100%] h-auto text-left ">
                                                                 <p className=' buy__info h-80 overflow-auto'>
@@ -131,17 +133,16 @@ const Stol = () => {
             {
                 api.map((value) => {
                     return (
-                        <div key={value.id} onClick={() => showModal(value.id)} className="card max-w-[300px] w-[100%] h-auto bg-[#0F1B03] mt-10 rounded-[15px] overflow-hidden hover:cursor-pointer">
-                            <div className="image w-[100%] h-[300px] "
-                                style={{
-                                    backgroundImage: `url(${value.img})`,
-                                    backgroundPosition: 'center center',
-                                    backgroundSize: 'cover'
-                                }}></div>
-                            <h1 className=" product__name text-neutral-50 text-lg font-bold mt-5 ml-3">Nomi: {value.name}</h1>
-                            <h1 className="product__price text-white text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price} so'm</h1>
 
+                        <div class="card" onClick={() => showModal(value.id)}>
+                            <img src={value.img} class="card-img-top" alt="..." />
+                            <div class="card-body">
+                            <h1 className=" product__name text-gray-700 text-lg font-bold mt-5 ml-3">Nomi: {value.name}</h1>
+                            <h1 className="product__price text-gray-700 text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price} so'm</h1>
+                            </div>
                         </div>
+
+
                     )
                 })
             }
@@ -150,3 +151,14 @@ const Stol = () => {
 }
 
 export default Stol
+
+// <div key={value.id} onClick={() => showModal(value.id)} className="card max-w-[300px] w-[100%] h-auto bg-[#0F1B03] mt-10 rounded-[15px] overflow-hidden hover:cursor-pointer">
+//     <div className="image w-[100%] h-[300px] "
+//         style={{
+//             backgroundImage: `url(${value.img})`,
+//             backgroundPosition: 'center center',
+//             backgroundSize: 'cover'
+//         }}></div>
+//     <h1 className=" product__name text-neutral-50 text-lg font-bold mt-5 ml-3">Nomi: {value.name}</h1>
+//     <h1 className="product__price text-white text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price} so'm</h1>
+// </div>
