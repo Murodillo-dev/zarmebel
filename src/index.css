@@ -59,7 +59,7 @@ body {
   width: 100%;
   max-height: 400px;
   /* background-color: #0F1B03; */
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -234,7 +234,7 @@ body {
   .stol {
     padding-right: 20px;
     padding-left: 20px;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .ant-modal-content {
