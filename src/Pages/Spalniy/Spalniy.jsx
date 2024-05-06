@@ -20,7 +20,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 const Spalniy = () => {
 
   //bring the data
-  const [url, setUrl] = useState('http://34.68.97.86/api/products-bycategory/badroom')
+  const [url, setUrl] = useState('https://34.68.97.86/api/products-bycategory/badroom')
   const [api, setApi] = useState([])
   useEffect(() => {
     axios.get(url)
