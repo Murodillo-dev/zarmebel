@@ -20,15 +20,16 @@ import { Pagination, Navigation } from 'swiper/modules';
 const Stol = () => {
 
     //bring the data
-    const [url, setUrl] = useState('http://localhost:3001/stol')
+    const [url, setUrl] = useState('http://34.68.97.86/api/products-bycategory/chair')
     const [api, setApi] = useState([])
     useEffect(() => {
         axios.get(url)
             .then(response => {
-                setApi(response.data);
+                setApi(response.data.products);
             })
     }, []);
 
+    console.log(api);
 
     //Modal
     const [open, setOpen] = useState(false);
@@ -88,21 +89,15 @@ const Stol = () => {
                                                                 modules={[Pagination, Navigation]}
                                                                 className="mySwiper"
                                                             >
-                                                                <SwiperSlide style={{
-                                                                    backgroundImage: `url(${value.img})`,
-                                                                    backgroundSize: 'cover',
-                                                                    backgroundPosition: 'center center'
-                                                                }}></SwiperSlide>
-                                                                <SwiperSlide style={{
-                                                                    backgroundImage: `url(${value.img})`,
-                                                                    backgroundSize: 'cover',
-                                                                    backgroundPosition: 'center center'
-                                                                }}></SwiperSlide>
-                                                                <SwiperSlide style={{
-                                                                    backgroundImage: `url(${value.img})`,
-                                                                    backgroundSize: 'cover',
-                                                                    backgroundPosition: 'center center'
-                                                                }}></SwiperSlide>
+                                                                {value.images.map(e => {
+                                                                    return (
+                                                                        <SwiperSlide style={{
+                                                                            backgroundImage: `url(${e})`,
+                                                                            backgroundSize: 'cover',
+                                                                            backgroundPosition: 'center center'
+                                                                        }}></SwiperSlide>
+                                                                    )
+                                                                })}
                                                             </Swiper>
                                                         </div>
 
@@ -137,10 +132,10 @@ const Stol = () => {
                 api.map((value) => {
                     return (
                         <div key={value.id} className="card" onClick={() => showModal(value.id)}>
-                            <img src={value.img} className="card-img-top" onError={(e) => console.error('Error loading image:', e)} />
+                            <img src={value.images[0]} className="card-img-top" onError={(e) => console.error('Error loading image:', e)} />
                             <div className="card-body">
                                 <h1 className=" product__name text-gray-700 text-lg font-bold mt-5 ml-3">Nomi: {value.name}</h1>
-                                <h1 className="product__price text-gray-700 text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price} so'm</h1>
+                                <h1 className="product__price text-gray-700 text-xl font-medium mt-4 mb-5 ml-3">Narxi: {value.price_after_currency} so'm</h1>
                             </div>
                         </div>
                     )
